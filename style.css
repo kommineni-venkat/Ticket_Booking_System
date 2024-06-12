@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(https://img.freepik.com/premium-photo/toy-plane-classic-blue-background-top-view_93675-69958.jpg);
+  background-size: cover;
+  color: #0f0f0f;
+  display: flex;
+  font-family: "Krona One", sans-serif;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 20px;
+}
+
+.ticket-container {
+  top: 320px;
+  margin: 20px 0;
+}
+
+.ticket-container select {
+  background-color: #e2e8eb;
+  border: 500;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left: 10px;
+  padding: 5px 15px 5px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.seat {
+  background-color: #e9e9eb;
+  height: 32px;
+  width: 35px;
+  margin: 7px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.seat.selected {
+  background-color: #10e63e;
+}
+
+.seat.occupied {
+  background-color: #d83b13;
+}
+
+.seat:nth-of-type(3) {
+  margin-right: 38px;
+}
+
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.4);
+}
+.showcase .seat:not(.occupied):hover {
+  cursor: default;
+  transform: scale(1);
+}
+.showcase {
+  background-color: rgba(10, 240, 79, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #214458;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+#span {
+  float: right;
+  margin-right: 22px;
+}
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.showcase li small {
+  margin-left: 4px;
+}
+.row {
+  display: flex;
+}
+
+p.text {
+  margin: 15px 0;
+  color: black;
+}
+p.text span {
+  color: rgb(47, 206, 26);
+}
+
+.cta-btn {
+  padding: 10px;
+}
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal-container.show-modal {
+  display: block;
+}
+.modal {
+  background-color: #c3c3d6;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(60, 156, 31, 0.3);
+  position: absolute;
+  overflow: hidden;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  max-width: 100%;
+  width: 400px;
+}
+.modal-header {
+  background-color: rgb(19, 118, 143);
+  text-align: center;
+}
+
+.modal-content {
+  margin-left: 20px;
+}
+.close-btn {
+  background: transparent;
+  border: none;
+  color: green;
+  font-size: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
